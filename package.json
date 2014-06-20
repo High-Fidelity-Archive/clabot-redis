@@ -14,5 +14,11 @@
     "clabot": "highfidelity/clabot",
     "hiredis": "*",
     "redis": "*"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/highfidelity/clabot-redis/issues"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "BSD-2-Clause"
 }
