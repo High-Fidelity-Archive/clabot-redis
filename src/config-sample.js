@@ -12,7 +12,10 @@
     },
     port: 1337,
     redis: {
-     contractorSet: 'my_redis_set'
+      contractorSet: 'my_redis_set',
+      database: 1,
+      port: 12345,
+      host: 'some-other-server.example.com'
     }
   };
   exports.options = config;
