@@ -11,7 +11,9 @@
       }
     },
     port: 1337,
-    redis_set: 'my_redis_set'
+    redis: {
+     contractorSet: 'my_redis_set'
+    }
   };
   exports.options = config;
 }).call(this);

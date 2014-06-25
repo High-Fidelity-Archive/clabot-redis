@@ -5,7 +5,7 @@
   redis = require('redis');
   config = require('../config');
 
-  redis_set = config.options.redis_set || 'signees';
+  redis_set = config.options.redis.contractorSet || 'signees';
 
   client = redis.createClient();
 
