@@ -10,7 +10,8 @@
         '$reponame': process.env.HUB_SECRET
       }
     },
-    port: 1337
+    port: 1337,
+    redis_set: 'my_redis_set'
   };
   exports.options = config;
 }).call(this);
