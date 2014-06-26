@@ -1,14 +1,14 @@
 {
   "name": "clabot-redis",
   "description": "Redis backed getContractors and addContractor implementation for clabot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/highfidelity/clabot-redis.git"
   },
   "main": "src/clabot.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.6.12"
   },
   "dependencies": {
     "clabot": "highfidelity/clabot",
