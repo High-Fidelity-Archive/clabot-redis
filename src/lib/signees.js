@@ -14,13 +14,14 @@
   client = redis.createClient(PORT, HOST);
 
   client.on('error', function(err) {
-    return console.log("Redis Error: " + err);
+    console.log("Redis Error: " + err);
   });
   client.select(DB);
 
   exports.getSignees = function(callback) {
     return client.SMEMBERS(SET, function(err, replies) {
       if (err) {
+        throw(err);
         return callback([]);
       } else {
         return callback(replies);
@@ -31,6 +32,7 @@
   exports.addSignee = function(github_username, callback) {
     return client.SADD(SET, github_username, function(err, replies) {
       if (err) {
+        throw(err);
         return callback(false);
       } else {
         return callback(true);
