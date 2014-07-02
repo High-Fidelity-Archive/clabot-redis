@@ -15,7 +15,11 @@
       contractorSet: 'my_redis_set',
       database: 1,
       port: 12345,
-      host: 'some-other-server.example.com'
+      host: 'some-other-server.example.com',
+      options: {
+        max_attempts: 5,
+        auth_pass: 'my-secret-redis-password'
+      }
     }
   };
   exports.options = config;
