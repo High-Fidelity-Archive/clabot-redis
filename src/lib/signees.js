@@ -10,8 +10,9 @@
   HOST = config.options.redis.host || '127.0.0.1';
   PORT = config.options.redis.port || '6379';
   SET  = config.options.redis.contractorSet || 'signees';
+  OPTS = config.options.redis.options || {};
 
-  client = redis.createClient(PORT, HOST);
+  client = redis.createClient(PORT, HOST, OPTS);
 
   client.on('error', function(err) {
     console.log("Redis Error: " + err);
